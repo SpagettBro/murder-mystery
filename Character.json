@@ -1,0 +1,1229 @@
+[
+  {
+    "id": "289d8c6e-da28-499b-a7cf-50602a156d2c",
+    "name": "Detective Clara Vale",
+    "type": "Character",
+    "description": "A former police detective attending the dinner party who takes charge of the investigation when Elias Blackthorne is murdered.",
+    "data": {
+      "name": "Detective Clara Vale",
+      "description": "A former police detective attending the dinner party who takes charge of the investigation when Elias Blackthorne is murdered.",
+      "role": "Detective/Investigator",
+      "backstory": "Former police detective with investigative experience",
+      "motivations": "To solve the murder of Elias Blackthorne and uncover the truth",
+      "alibi": "Was in the dining room and library during the evening, witnessed by other guests",
+      "relationships": [
+        {
+          "type": "investigates",
+          "target_name": "Elias Blackthorne"
+        },
+        {
+          "type": "interrogates",
+          "target_name": "Victor Shaw"
+        },
+        {
+          "type": "interrogates",
+          "target_name": "Margaret Blackthorne"
+        },
+        {
+          "type": "interrogates",
+          "target_name": "Dr. Simon Reed"
+        },
+        {
+          "type": "interrogates",
+          "target_name": "Lucy Hart"
+        },
+        {
+          "type": "exposes",
+          "target_name": "Victor Shaw"
+        },
+        {
+          "type": "exposes",
+          "target_name": "Lucy Hart"
+        }
+      ],
+      "icon": "person",
+      "age": "38",
+      "physical_appearance": "",
+      "secrets": ""
+    },
+    "relationships": [
+      {
+        "id": "092b4441-8b66-4030-b0f2-a359feea4427",
+        "type": "investigated by",
+        "direction": "incoming",
+        "other_entity_id": "29c5c624-99c5-4ddd-955e-f77e58ac24bc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "4452a01b-18b3-4a4a-b7a0-eecd00fc6b5c",
+        "type": "observed by",
+        "direction": "incoming",
+        "other_entity_id": "6c4b899d-a4f2-4c8c-a882-06e6c76adf98",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "156b5fb1-d7ec-4814-9eb2-7490b7b0425a",
+        "type": "found by",
+        "direction": "incoming",
+        "other_entity_id": "731cc9fe-b545-429e-908e-025c767a0e0c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "24913dcf-83d0-4841-8585-e6ed983cb1a5",
+        "type": "examined by",
+        "direction": "incoming",
+        "other_entity_id": "902b7fde-e742-4f8b-883b-54b20905a404",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "98b73739-1ca8-4a24-a2c3-d08d6beef33f",
+        "type": "investigator",
+        "direction": "incoming",
+        "other_entity_id": "98394279-96b7-40f3-9f76-d4bc63079f0c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "0d64591c-4949-40d9-82ff-9bbe98d62454",
+        "type": "witness",
+        "direction": "incoming",
+        "other_entity_id": "216fef05-0e74-49e6-8b78-656357c7c3dc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "5b16f27b-5ea4-4a78-89a4-276f711ffb4d",
+        "type": "investigator",
+        "direction": "incoming",
+        "other_entity_id": "d02eefc2-cbf4-4b32-95eb-009c56adc17f",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "03e041c9-b451-48bc-929b-3cb22f921a4f",
+        "type": "owned by",
+        "direction": "incoming",
+        "other_entity_id": "8c076dcb-32cd-4a2b-b2e9-a0b174191a5f",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "74b94c57-045d-45d7-9151-73982654dded",
+        "type": "exposed by",
+        "direction": "incoming",
+        "other_entity_id": "967c15a9-4584-45cc-b128-c84087d11eac",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "47f5a6a8-f19d-4f5d-b2bd-8a86deadce24",
+        "type": "discoverer",
+        "direction": "incoming",
+        "other_entity_id": "bd011b31-8bbd-465b-ac42-a151113c41ea",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "956c307a-55a7-4727-bbfa-56def9ff326e",
+        "type": "investigator",
+        "direction": "incoming",
+        "other_entity_id": "61f3342b-2f8c-48bf-8ff7-5a908837ded4",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "e26147bd-e590-4973-b3de-f41caa2ceaef",
+        "type": "observer",
+        "direction": "incoming",
+        "other_entity_id": "84457fa8-4325-4843-8ac8-cd84f59cb468",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "f505d31b-2fa3-4401-9e7c-3c74b1e38702",
+        "type": "found by",
+        "direction": "incoming",
+        "other_entity_id": "5414ce8f-4c75-475e-b203-415910e64c36",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "c5837525-bcd8-4ce4-8ec7-85e813ee06bc",
+        "type": "examined by",
+        "direction": "incoming",
+        "other_entity_id": "d799eee8-0879-403c-9015-c72db2d966d1",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "a24dbeb0-19b2-40d6-b48b-896bab5b5caf",
+        "type": "investigates",
+        "direction": "outgoing",
+        "other_entity_id": "29c5c624-99c5-4ddd-955e-f77e58ac24bc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "d7ede0bd-5283-4645-bb5c-2a2e1a15a51f",
+        "type": "interrogates",
+        "direction": "outgoing",
+        "other_entity_id": "a8ae9aa5-0e5b-42f3-a1ea-3bedebfc038f",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "440d9bd6-9a36-4f33-833d-3183dc1d1f70",
+        "type": "interrogates",
+        "direction": "outgoing",
+        "other_entity_id": "223d474a-aa34-4294-8e53-9be5b50a5085",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "615a9736-27ee-4339-a55d-5123c773dc76",
+        "type": "interrogates",
+        "direction": "outgoing",
+        "other_entity_id": "8da2d7bd-58a9-4101-8c40-d6111d7880e1",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "1181a704-b7ed-4fa2-9d84-cd5ad385c2fb",
+        "type": "interrogates",
+        "direction": "outgoing",
+        "other_entity_id": "684f3b0b-7dee-4815-8264-e1be346e3a01",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "8bc0a8f3-d152-4859-a3be-7113e13f74ab",
+        "type": "exposes",
+        "direction": "outgoing",
+        "other_entity_id": "a8ae9aa5-0e5b-42f3-a1ea-3bedebfc038f",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "3e77f3f6-46b2-4cd2-84e6-0fd7570d5557",
+        "type": "exposes",
+        "direction": "outgoing",
+        "other_entity_id": "684f3b0b-7dee-4815-8264-e1be346e3a01",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "ec01f394-b108-4b8a-b9b4-a82ae135c16f",
+        "type": "arrested by",
+        "direction": "incoming",
+        "other_entity_id": "a8ae9aa5-0e5b-42f3-a1ea-3bedebfc038f",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "5e709771-3662-4fef-b0bb-c9898a61fd5e",
+        "type": "investigated by",
+        "direction": "incoming",
+        "other_entity_id": "223d474a-aa34-4294-8e53-9be5b50a5085",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "1df7209a-3132-4b10-b0f2-fc4b9c8a6550",
+        "type": "investigated by",
+        "direction": "incoming",
+        "other_entity_id": "8da2d7bd-58a9-4101-8c40-d6111d7880e1",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "05ebca15-064d-4099-b69d-932342b6d67a",
+        "type": "exposed by",
+        "direction": "incoming",
+        "other_entity_id": "684f3b0b-7dee-4815-8264-e1be346e3a01",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "3e3a69fb-02e6-4543-81f2-928416045757",
+        "type": "involves",
+        "direction": "incoming",
+        "other_entity_id": "f2da6164-9c66-4ed6-8b03-86a5c9d0f3df",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "cad9e3dd-1bc8-4384-a5b5-bb188d6377c1",
+        "type": "witnessed by",
+        "direction": "incoming",
+        "other_entity_id": "8c5e68a3-241d-4f7b-b5fd-54f27f4cd9dc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "20c97573-7d77-4faa-ab63-b10e4892dd9a",
+        "type": "revealer",
+        "direction": "incoming",
+        "other_entity_id": "155bcb8b-846d-48b3-bc6b-3b1d8e6854f0",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "63e315da-8d2f-4d55-8eb6-bca42e65a800",
+        "type": "discovered by",
+        "direction": "incoming",
+        "other_entity_id": "ad9de563-47d7-433b-8556-cde066f6b849",
+        "description": "",
+        "extra_data": null
+      }
+    ]
+  },
+  {
+    "id": "8da2d7bd-58a9-4101-8c40-d6111d7880e1",
+    "name": "Dr. Simon Reed",
+    "type": "Character",
+    "description": "The family physician carrying secret debts who claims to have been treating a migraine during the murder.",
+    "data": {
+      "name": "Dr. Simon Reed",
+      "description": "The family physician carrying secret debts who claims to have been treating a migraine during the murder.",
+      "role": "Suspect",
+      "backstory": "Family physician with debts that no one was supposed to know about",
+      "motivations": "Financial pressures from hidden debts",
+      "secrets": "Carries debts no one was supposed to know about; his medical bag contained no medication despite claiming to treat a migraine",
+      "alibi": "Claimed to be treating a migraine, but his medical bag contained no medication",
+      "relationships": [
+        {
+          "type": "physician of",
+          "target_name": "Elias Blackthorne"
+        },
+        {
+          "type": "investigated by",
+          "target_name": "Detective Clara Vale"
+        }
+      ]
+    },
+    "relationships": [
+      {
+        "id": "fb80935c-07b9-4fd3-afb0-2ebe2d31b3bb",
+        "type": "owned by",
+        "direction": "incoming",
+        "other_entity_id": "902b7fde-e742-4f8b-883b-54b20905a404",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "55d7bca5-2c7c-4077-92ea-251470b398c4",
+        "type": "interrogated",
+        "direction": "incoming",
+        "other_entity_id": "d02eefc2-cbf4-4b32-95eb-009c56adc17f",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "bc715903-8020-4508-b198-638dde521f0c",
+        "type": "patient of",
+        "direction": "incoming",
+        "other_entity_id": "29c5c624-99c5-4ddd-955e-f77e58ac24bc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "3663b2dc-fc6c-431b-95ef-f52212bfba7c",
+        "type": "involves",
+        "direction": "incoming",
+        "other_entity_id": "84457fa8-4325-4843-8ac8-cd84f59cb468",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "615a9736-27ee-4339-a55d-5123c773dc76",
+        "type": "interrogates",
+        "direction": "incoming",
+        "other_entity_id": "289d8c6e-da28-499b-a7cf-50602a156d2c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "aa7240fc-37e3-43fc-876f-6ce9fe7fef39",
+        "type": "physician of",
+        "direction": "outgoing",
+        "other_entity_id": "29c5c624-99c5-4ddd-955e-f77e58ac24bc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "1df7209a-3132-4b10-b0f2-fc4b9c8a6550",
+        "type": "investigated by",
+        "direction": "outgoing",
+        "other_entity_id": "289d8c6e-da28-499b-a7cf-50602a156d2c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "4144c689-d76a-4fc3-a921-ce8c0927f142",
+        "type": "witnessed by",
+        "direction": "incoming",
+        "other_entity_id": "f2da6164-9c66-4ed6-8b03-86a5c9d0f3df",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "ace5bb2c-1172-452d-b3cf-c54497611fb6",
+        "type": "witnessed by",
+        "direction": "incoming",
+        "other_entity_id": "8c5e68a3-241d-4f7b-b5fd-54f27f4cd9dc",
+        "description": "",
+        "extra_data": null
+      }
+    ]
+  },
+  {
+    "id": "29c5c624-99c5-4ddd-955e-f77e58ac24bc",
+    "name": "Elias Blackthorne",
+    "type": "Character",
+    "description": "A wealthy seventy-two-year-old man who owns Blackthorne Manor and hosts a dinner party where he announces his intention to reveal a thief among his guests before being murdered.",
+    "data": {
+      "name": "Elias Blackthorne",
+      "description": "A wealthy seventy-two-year-old man who owns Blackthorne Manor and hosts a dinner party where he announces his intention to reveal a thief among his guests before being murdered.",
+      "role": "Victim",
+      "age": "72",
+      "physical_appearance": "Silver-haired, sharp-eyed, carries himself with the confidence of wealth",
+      "backstory": "Twenty years ago, he was involved with Lucy Hart's mother, who disappeared after becoming pregnant. He has been stealing from or lying to someone, and buried secrets from his past.",
+      "motivations": "To reveal the truth about someone who has been stealing from him and lying to him",
+      "secrets": "Had a relationship with Lucy Hart's mother who disappeared after becoming pregnant; buried evidence of this relationship",
+      "alibi": "N/A - victim",
+      "relationships": [
+        {
+          "type": "father of",
+          "target_name": "Lucy Hart (implied)"
+        },
+        {
+          "type": "business partner of",
+          "target_name": "Victor Shaw"
+        },
+        {
+          "type": "father of",
+          "target_name": "Margaret Blackthorne"
+        },
+        {
+          "type": "patient of",
+          "target_name": "Dr. Simon Reed"
+        },
+        {
+          "type": "murdered by",
+          "target_name": "Victor Shaw"
+        },
+        {
+          "type": "confronted by",
+          "target_name": "Lucy Hart"
+        },
+        {
+          "type": "investigated by",
+          "target_name": "Detective Clara Vale"
+        },
+        {
+          "type": "owner of",
+          "target_name": "Blackthorne Manor"
+        }
+      ]
+    },
+    "relationships": [
+      {
+        "id": "d29725cd-2f97-43b1-9bf8-6c2235741036",
+        "type": "father of",
+        "direction": "outgoing",
+        "other_entity_id": "9fef4137-a8f7-4047-b543-3a018493d03c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "092b4441-8b66-4030-b0f2-a359feea4427",
+        "type": "investigated by",
+        "direction": "outgoing",
+        "other_entity_id": "289d8c6e-da28-499b-a7cf-50602a156d2c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "0a2aab61-64c6-4159-9a30-f621a586fda9",
+        "type": "owned by",
+        "direction": "incoming",
+        "other_entity_id": "7ab9d094-07ac-43bf-bf26-c0e67ef790cf",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "6b8409d6-05ad-4777-a064-de924ee17d26",
+        "type": "depicts",
+        "direction": "incoming",
+        "other_entity_id": "731cc9fe-b545-429e-908e-025c767a0e0c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "d59a5183-eb37-4f2e-b271-2fcefb3fe8f1",
+        "type": "victim",
+        "direction": "incoming",
+        "other_entity_id": "98394279-96b7-40f3-9f76-d4bc63079f0c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "45c73847-b83f-4cc4-a580-ca5caa35b69a",
+        "type": "business partner of",
+        "direction": "outgoing",
+        "other_entity_id": "a8ae9aa5-0e5b-42f3-a1ea-3bedebfc038f",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "5729bd9e-eb67-474a-84f7-4e46df305845",
+        "type": "owner of",
+        "direction": "outgoing",
+        "other_entity_id": "22ceddb8-8429-4a35-9f55-63386da9d3c9",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "d5c28618-5b61-4bd7-9651-789deb4ef526",
+        "type": "father of",
+        "direction": "outgoing",
+        "other_entity_id": "223d474a-aa34-4294-8e53-9be5b50a5085",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "bc715903-8020-4508-b198-638dde521f0c",
+        "type": "patient of",
+        "direction": "outgoing",
+        "other_entity_id": "8da2d7bd-58a9-4101-8c40-d6111d7880e1",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "9205dcbe-0d47-4e01-add6-b75800dba354",
+        "type": "murdered by",
+        "direction": "outgoing",
+        "other_entity_id": "a8ae9aa5-0e5b-42f3-a1ea-3bedebfc038f",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "c6509b5d-ec8d-4f27-93d5-c5c8f170c8d2",
+        "type": "involved with",
+        "direction": "incoming",
+        "other_entity_id": "78761eae-c3ca-4f8d-af54-c251ccfcbe61",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "64b5bf43-6c39-4902-a997-d3f2ab91b71b",
+        "type": "worked for",
+        "direction": "incoming",
+        "other_entity_id": "78761eae-c3ca-4f8d-af54-c251ccfcbe61",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "9c3ca5c4-3523-4991-b0b5-e99a3f624c9f",
+        "type": "confronted by",
+        "direction": "outgoing",
+        "other_entity_id": "684f3b0b-7dee-4815-8264-e1be346e3a01",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "435e2221-d364-4137-952a-fc99978e3080",
+        "type": "antagonist",
+        "direction": "incoming",
+        "other_entity_id": "967c15a9-4584-45cc-b128-c84087d11eac",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "6c81652a-3b0b-4b6c-9803-b4f0125db7ed",
+        "type": "depicts",
+        "direction": "incoming",
+        "other_entity_id": "02fcfa37-7ebc-47b0-a759-f41b79ff7df3",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "a24dbeb0-19b2-40d6-b48b-896bab5b5caf",
+        "type": "investigates",
+        "direction": "incoming",
+        "other_entity_id": "289d8c6e-da28-499b-a7cf-50602a156d2c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "694cb67f-b9e9-4290-8efb-06c3c1cce985",
+        "type": "business partner of",
+        "direction": "incoming",
+        "other_entity_id": "a8ae9aa5-0e5b-42f3-a1ea-3bedebfc038f",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "99f9284d-6a9f-47d0-a7b5-1e1a6aa17f4b",
+        "type": "murdered",
+        "direction": "incoming",
+        "other_entity_id": "a8ae9aa5-0e5b-42f3-a1ea-3bedebfc038f",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "4b56c3c0-e3e1-4323-ab71-be8a3a96b634",
+        "type": "owned by",
+        "direction": "incoming",
+        "other_entity_id": "22ceddb8-8429-4a35-9f55-63386da9d3c9",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "fb8bd19b-bb02-42ef-8464-17d78cbbb540",
+        "type": "daughter of",
+        "direction": "incoming",
+        "other_entity_id": "223d474a-aa34-4294-8e53-9be5b50a5085",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "aa7240fc-37e3-43fc-876f-6ce9fe7fef39",
+        "type": "physician of",
+        "direction": "incoming",
+        "other_entity_id": "8da2d7bd-58a9-4101-8c40-d6111d7880e1",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "e509c6e6-3dc2-40da-a66f-cb1ecaeb7a9d",
+        "type": "daughter of",
+        "direction": "incoming",
+        "other_entity_id": "684f3b0b-7dee-4815-8264-e1be346e3a01",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "062cf2e6-1880-4acc-8122-700992fb5109",
+        "type": "confronted",
+        "direction": "incoming",
+        "other_entity_id": "684f3b0b-7dee-4815-8264-e1be346e3a01",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "28feadde-0656-47e0-802c-edc16b927537",
+        "type": "involves",
+        "direction": "incoming",
+        "other_entity_id": "8c5e68a3-241d-4f7b-b5fd-54f27f4cd9dc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "8f5dc746-ff6c-4d73-b2c9-889bea858416",
+        "type": "victim",
+        "direction": "incoming",
+        "other_entity_id": "ad9de563-47d7-433b-8556-cde066f6b849",
+        "description": "",
+        "extra_data": null
+      }
+    ]
+  },
+  {
+    "id": "684f3b0b-7dee-4815-8264-e1be346e3a01",
+    "name": "Lucy Hart",
+    "type": "Character",
+    "description": "A woman invited as a \"family friend\" who is actually a journalist and the daughter of Elias's former lover, seeking proof of her connection to him.",
+    "data": {
+      "name": "Lucy Hart",
+      "description": "A woman invited as a \"family friend\" who is actually a journalist and the daughter of Elias's former lover, seeking proof of her connection to him.",
+      "role": "Suspect/Accomplice",
+      "backstory": "Daughter of a woman who worked for Elias and disappeared after becoming pregnant twenty years ago; her mother was involved with Elias",
+      "motivations": "To find proof of her connection to Elias and what happened to her mother",
+      "secrets": "Is actually a journalist with a press badge; is the daughter of Elias's former lover; confronted Elias and used a spare key to escape through the servant corridor; worked with Victor Shaw",
+      "alibi": "Claimed to have never met Elias before, which was a lie; used the servant corridor behind the bookcase to leave the locked study",
+      "relationships": [
+        {
+          "type": "daughter of",
+          "target_name": "Elias Blackthorne (implied)"
+        },
+        {
+          "type": "confronted",
+          "target_name": "Elias Blackthorne"
+        },
+        {
+          "type": "accomplice of",
+          "target_name": "Victor Shaw"
+        },
+        {
+          "type": "exposed by",
+          "target_name": "Detective Clara Vale"
+        }
+      ]
+    },
+    "relationships": [
+      {
+        "id": "6fd9eb6d-3b2f-438a-8898-f78c746500b6",
+        "type": "owned by",
+        "direction": "incoming",
+        "other_entity_id": "731cc9fe-b545-429e-908e-025c767a0e0c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "fa9358f1-5103-492e-8e7d-94207505c42b",
+        "type": "perpetrator",
+        "direction": "incoming",
+        "other_entity_id": "98394279-96b7-40f3-9f76-d4bc63079f0c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "4783f02d-4537-4c90-b524-1801e32eade7",
+        "type": "interrogated",
+        "direction": "incoming",
+        "other_entity_id": "d02eefc2-cbf4-4b32-95eb-009c56adc17f",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "4b556e6d-dd56-48e2-a5e3-2a5bd828673d",
+        "type": "mother of",
+        "direction": "incoming",
+        "other_entity_id": "78761eae-c3ca-4f8d-af54-c251ccfcbe61",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "75b0a131-79f0-4642-a070-3c99b9dc6d7c",
+        "type": "used by",
+        "direction": "incoming",
+        "other_entity_id": "53371831-880f-402a-8ce1-64daa451acc6",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "348335c4-315a-4727-a3dd-d2a7bfc97e85",
+        "type": "owned by",
+        "direction": "incoming",
+        "other_entity_id": "5414ce8f-4c75-475e-b203-415910e64c36",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "9c3ca5c4-3523-4991-b0b5-e99a3f624c9f",
+        "type": "confronted by",
+        "direction": "incoming",
+        "other_entity_id": "29c5c624-99c5-4ddd-955e-f77e58ac24bc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "53a5cee0-abf2-419c-98d9-56f8336a2028",
+        "type": "protagonist",
+        "direction": "incoming",
+        "other_entity_id": "967c15a9-4584-45cc-b128-c84087d11eac",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "ece0836d-0607-4777-b3f3-13d861af04ff",
+        "type": "involves",
+        "direction": "incoming",
+        "other_entity_id": "bd011b31-8bbd-465b-ac42-a151113c41ea",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "200b3ee5-72fc-402b-a1c1-31d289e4292b",
+        "type": "perpetrator",
+        "direction": "incoming",
+        "other_entity_id": "61f3342b-2f8c-48bf-8ff7-5a908837ded4",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "26e43dbb-35e6-4c19-b6e2-7c2a1c5ad289",
+        "type": "involves",
+        "direction": "incoming",
+        "other_entity_id": "84457fa8-4325-4843-8ac8-cd84f59cb468",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "f7db51cb-ff40-42d3-9f97-6a8f39867a2d",
+        "type": "owned by",
+        "direction": "incoming",
+        "other_entity_id": "d799eee8-0879-403c-9015-c72db2d966d1",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "1181a704-b7ed-4fa2-9d84-cd5ad385c2fb",
+        "type": "interrogates",
+        "direction": "incoming",
+        "other_entity_id": "289d8c6e-da28-499b-a7cf-50602a156d2c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "3e77f3f6-46b2-4cd2-84e6-0fd7570d5557",
+        "type": "exposes",
+        "direction": "incoming",
+        "other_entity_id": "289d8c6e-da28-499b-a7cf-50602a156d2c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "063c3674-639d-4902-b13e-4ac2b8740de2",
+        "type": "accomplice of",
+        "direction": "incoming",
+        "other_entity_id": "a8ae9aa5-0e5b-42f3-a1ea-3bedebfc038f",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "e509c6e6-3dc2-40da-a66f-cb1ecaeb7a9d",
+        "type": "daughter of",
+        "direction": "outgoing",
+        "other_entity_id": "29c5c624-99c5-4ddd-955e-f77e58ac24bc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "062cf2e6-1880-4acc-8122-700992fb5109",
+        "type": "confronted",
+        "direction": "outgoing",
+        "other_entity_id": "29c5c624-99c5-4ddd-955e-f77e58ac24bc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "f76dc398-b255-441c-8f14-faa688bef211",
+        "type": "accomplice of",
+        "direction": "outgoing",
+        "other_entity_id": "a8ae9aa5-0e5b-42f3-a1ea-3bedebfc038f",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "05ebca15-064d-4099-b69d-932342b6d67a",
+        "type": "exposed by",
+        "direction": "outgoing",
+        "other_entity_id": "289d8c6e-da28-499b-a7cf-50602a156d2c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "a12c7091-f9b9-44b2-982a-98834905ad82",
+        "type": "found by",
+        "direction": "incoming",
+        "other_entity_id": "fe14177a-a08c-4c80-8160-24d6d9cf15f4",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "4c463f12-0861-4d1b-a9ac-9a37b3b821c0",
+        "type": "witnessed by",
+        "direction": "incoming",
+        "other_entity_id": "f2da6164-9c66-4ed6-8b03-86a5c9d0f3df",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "70141b6a-80b2-497d-a7f9-f84eabf4aba1",
+        "type": "witnessed by",
+        "direction": "incoming",
+        "other_entity_id": "8c5e68a3-241d-4f7b-b5fd-54f27f4cd9dc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "035c7f1b-417f-4943-865c-41ce72bfe235",
+        "type": "exposed",
+        "direction": "incoming",
+        "other_entity_id": "155bcb8b-846d-48b3-bc6b-3b1d8e6854f0",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "415b442c-e1b2-462a-8067-f55c33e08fdf",
+        "type": "accomplice",
+        "direction": "incoming",
+        "other_entity_id": "ad9de563-47d7-433b-8556-cde066f6b849",
+        "description": "",
+        "extra_data": null
+      }
+    ]
+  },
+  {
+    "id": "78761eae-c3ca-4f8d-af54-c251ccfcbe61",
+    "name": "Lucy's Mother",
+    "type": "Character",
+    "description": "A woman who worked for Elias Blackthorne twenty years ago and disappeared after telling people she was pregnant.",
+    "data": {
+      "name": "Lucy's Mother",
+      "description": "A woman who worked for Elias Blackthorne twenty years ago and disappeared after telling people she was pregnant.",
+      "role": "Historical figure/Victim",
+      "physical_appearance": "Shown in a twenty-year-old photograph with Elias",
+      "backstory": "Worked for Elias Blackthorne and became pregnant, then disappeared",
+      "secrets": "Was involved with Elias Blackthorne and disappeared under mysterious circumstances",
+      "relationships": [
+        {
+          "type": "mother of",
+          "target_name": "Lucy Hart"
+        },
+        {
+          "type": "involved with",
+          "target_name": "Elias Blackthorne"
+        },
+        {
+          "type": "worked for",
+          "target_name": "Elias Blackthorne"
+        }
+      ]
+    },
+    "relationships": [
+      {
+        "id": "26a72b8f-0cf0-42c6-bc6b-f75cc87bf3d7",
+        "type": "depicts",
+        "direction": "incoming",
+        "other_entity_id": "731cc9fe-b545-429e-908e-025c767a0e0c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "4b556e6d-dd56-48e2-a5e3-2a5bd828673d",
+        "type": "mother of",
+        "direction": "outgoing",
+        "other_entity_id": "684f3b0b-7dee-4815-8264-e1be346e3a01",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "c6509b5d-ec8d-4f27-93d5-c5c8f170c8d2",
+        "type": "involved with",
+        "direction": "outgoing",
+        "other_entity_id": "29c5c624-99c5-4ddd-955e-f77e58ac24bc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "64b5bf43-6c39-4902-a997-d3f2ab91b71b",
+        "type": "worked for",
+        "direction": "outgoing",
+        "other_entity_id": "29c5c624-99c5-4ddd-955e-f77e58ac24bc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "08eae923-ebc5-4b58-a604-5ea474663395",
+        "type": "involves",
+        "direction": "incoming",
+        "other_entity_id": "967c15a9-4584-45cc-b128-c84087d11eac",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "6a41ceab-27aa-4adc-b4f8-7ff7b15bacfb",
+        "type": "involves",
+        "direction": "incoming",
+        "other_entity_id": "bd011b31-8bbd-465b-ac42-a151113c41ea",
+        "description": "",
+        "extra_data": null
+      }
+    ]
+  },
+  {
+    "id": "223d474a-aa34-4294-8e53-9be5b50a5085",
+    "name": "Margaret Blackthorne",
+    "type": "Character",
+    "description": "Elias Blackthorne's daughter whose inheritance is shrinking and who claims to have been crying in her bedroom during the murder.",
+    "data": {
+      "name": "Margaret Blackthorne",
+      "description": "Elias Blackthorne's daughter whose inheritance is shrinking and who claims to have been crying in her bedroom during the murder.",
+      "role": "Suspect",
+      "physical_appearance": "Mascara intact despite claiming to have been crying",
+      "backstory": "Daughter of Elias Blackthorne with a shrinking inheritance",
+      "motivations": "Financial concerns regarding her inheritance",
+      "secrets": "Lied about crying in her bedroom - her mascara hadn't moved",
+      "alibi": "Claimed to be crying in her bedroom, but her mascara was intact",
+      "relationships": [
+        {
+          "type": "daughter of",
+          "target_name": "Elias Blackthorne"
+        },
+        {
+          "type": "investigated by",
+          "target_name": "Detective Clara Vale"
+        }
+      ]
+    },
+    "relationships": [
+      {
+        "id": "d5c28618-5b61-4bd7-9651-789deb4ef526",
+        "type": "father of",
+        "direction": "incoming",
+        "other_entity_id": "29c5c624-99c5-4ddd-955e-f77e58ac24bc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "d6c4de6d-ca6e-484d-829b-055ef819c1cc",
+        "type": "interrogated",
+        "direction": "incoming",
+        "other_entity_id": "d02eefc2-cbf4-4b32-95eb-009c56adc17f",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "6eca2b25-eb1f-48c7-b356-1552569cd905",
+        "type": "involves",
+        "direction": "incoming",
+        "other_entity_id": "84457fa8-4325-4843-8ac8-cd84f59cb468",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "440d9bd6-9a36-4f33-833d-3183dc1d1f70",
+        "type": "interrogates",
+        "direction": "incoming",
+        "other_entity_id": "289d8c6e-da28-499b-a7cf-50602a156d2c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "fb8bd19b-bb02-42ef-8464-17d78cbbb540",
+        "type": "daughter of",
+        "direction": "outgoing",
+        "other_entity_id": "29c5c624-99c5-4ddd-955e-f77e58ac24bc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "5e709771-3662-4fef-b0bb-c9898a61fd5e",
+        "type": "investigated by",
+        "direction": "outgoing",
+        "other_entity_id": "289d8c6e-da28-499b-a7cf-50602a156d2c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "b22f673e-3cbc-41e5-9ee7-7f2f56c51887",
+        "type": "witnessed by",
+        "direction": "incoming",
+        "other_entity_id": "f2da6164-9c66-4ed6-8b03-86a5c9d0f3df",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "c26df6d8-2074-4956-b146-171bd4112f0b",
+        "type": "witnessed by",
+        "direction": "incoming",
+        "other_entity_id": "8c5e68a3-241d-4f7b-b5fd-54f27f4cd9dc",
+        "description": "",
+        "extra_data": null
+      }
+    ]
+  },
+  {
+    "id": "a8ae9aa5-0e5b-42f3-a1ea-3bedebfc038f",
+    "name": "Victor Shaw",
+    "type": "Character",
+    "description": "Elias Blackthorne's longtime business partner who claims to have been in the cellar during the murder but whose dry shoes contradict his alibi.",
+    "data": {
+      "name": "Victor Shaw",
+      "description": "Elias Blackthorne's longtime business partner who claims to have been in the cellar during the murder but whose dry shoes contradict his alibi.",
+      "role": "Suspect/Murderer",
+      "physical_appearance": "Sweating through his collar, showing signs of nervousness",
+      "backstory": "Longtime business partner of Elias Blackthorne with hidden secrets",
+      "motivations": "To prevent Elias from exposing him; to protect himself from revelation",
+      "secrets": "Was about to be exposed by Elias; fired the gun that killed Elias; knew about the sealed servant corridor",
+      "alibi": "Claimed to be in the cellar, but his shoes were dry despite the flooded stairs",
+      "relationships": [
+        {
+          "type": "business partner of",
+          "target_name": "Elias Blackthorne"
+        },
+        {
+          "type": "murdered",
+          "target_name": "Elias Blackthorne"
+        },
+        {
+          "type": "accomplice of",
+          "target_name": "Lucy Hart"
+        },
+        {
+          "type": "arrested by",
+          "target_name": "Detective Clara Vale"
+        }
+      ]
+    },
+    "relationships": [
+      {
+        "id": "37dbc103-89aa-4921-bd90-5f3bd2b25132",
+        "type": "alibi location for",
+        "direction": "incoming",
+        "other_entity_id": "3928494e-3717-45a1-ad91-f3c6848aa685",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "07184c26-0aa5-4e8e-88b9-23dfa663f3e7",
+        "type": "perpetrator",
+        "direction": "incoming",
+        "other_entity_id": "98394279-96b7-40f3-9f76-d4bc63079f0c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "f4697957-2330-47ca-9926-707e95f6fc18",
+        "type": "arrested",
+        "direction": "incoming",
+        "other_entity_id": "216fef05-0e74-49e6-8b78-656357c7c3dc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "45c73847-b83f-4cc4-a580-ca5caa35b69a",
+        "type": "business partner of",
+        "direction": "incoming",
+        "other_entity_id": "29c5c624-99c5-4ddd-955e-f77e58ac24bc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "c239e8a4-3558-4bfb-b181-01d2b68831f5",
+        "type": "interrogated",
+        "direction": "incoming",
+        "other_entity_id": "d02eefc2-cbf4-4b32-95eb-009c56adc17f",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "9205dcbe-0d47-4e01-add6-b75800dba354",
+        "type": "murdered by",
+        "direction": "incoming",
+        "other_entity_id": "29c5c624-99c5-4ddd-955e-f77e58ac24bc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "db6f34d1-0853-46ea-ba89-566400d522f8",
+        "type": "known to",
+        "direction": "incoming",
+        "other_entity_id": "53371831-880f-402a-8ce1-64daa451acc6",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "0ea25d82-1f00-4c92-b25e-afb3da627399",
+        "type": "involves",
+        "direction": "incoming",
+        "other_entity_id": "84457fa8-4325-4843-8ac8-cd84f59cb468",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "5a326f63-bb0e-4af8-a834-644b86f75c51",
+        "type": "viewed by",
+        "direction": "incoming",
+        "other_entity_id": "02fcfa37-7ebc-47b0-a759-f41b79ff7df3",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "d7ede0bd-5283-4645-bb5c-2a2e1a15a51f",
+        "type": "interrogates",
+        "direction": "incoming",
+        "other_entity_id": "289d8c6e-da28-499b-a7cf-50602a156d2c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "8bc0a8f3-d152-4859-a3be-7113e13f74ab",
+        "type": "exposes",
+        "direction": "incoming",
+        "other_entity_id": "289d8c6e-da28-499b-a7cf-50602a156d2c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "694cb67f-b9e9-4290-8efb-06c3c1cce985",
+        "type": "business partner of",
+        "direction": "outgoing",
+        "other_entity_id": "29c5c624-99c5-4ddd-955e-f77e58ac24bc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "99f9284d-6a9f-47d0-a7b5-1e1a6aa17f4b",
+        "type": "murdered",
+        "direction": "outgoing",
+        "other_entity_id": "29c5c624-99c5-4ddd-955e-f77e58ac24bc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "063c3674-639d-4902-b13e-4ac2b8740de2",
+        "type": "accomplice of",
+        "direction": "outgoing",
+        "other_entity_id": "684f3b0b-7dee-4815-8264-e1be346e3a01",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "ec01f394-b108-4b8a-b9b4-a82ae135c16f",
+        "type": "arrested by",
+        "direction": "outgoing",
+        "other_entity_id": "289d8c6e-da28-499b-a7cf-50602a156d2c",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "f76dc398-b255-441c-8f14-faa688bef211",
+        "type": "accomplice of",
+        "direction": "incoming",
+        "other_entity_id": "684f3b0b-7dee-4815-8264-e1be346e3a01",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "2be2fa6c-7f61-4556-90a5-2868c644e481",
+        "type": "witnessed by",
+        "direction": "incoming",
+        "other_entity_id": "f2da6164-9c66-4ed6-8b03-86a5c9d0f3df",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "a5e22103-e4c8-48e7-ac96-f7b7b6acb06a",
+        "type": "witnessed by",
+        "direction": "incoming",
+        "other_entity_id": "8c5e68a3-241d-4f7b-b5fd-54f27f4cd9dc",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "b9b2915d-bd78-44cc-8a28-871ad343230b",
+        "type": "exposed",
+        "direction": "incoming",
+        "other_entity_id": "155bcb8b-846d-48b3-bc6b-3b1d8e6854f0",
+        "description": "",
+        "extra_data": null
+      },
+      {
+        "id": "055f4ea5-2d98-4c46-ae10-fee609d6794f",
+        "type": "perpetrator",
+        "direction": "incoming",
+        "other_entity_id": "ad9de563-47d7-433b-8556-cde066f6b849",
+        "description": "",
+        "extra_data": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://craala0ni101e"]
+
+[ext_resource type="Script" uid="uid://b4ifr0pxnyi3s" path="res://scenes/game_ui.gd" id="1_k48mc"]
+[ext_resource type="PackedScene" uid="uid://dbxwrmwxbs3kd" path="res://scenes/ai_server.tscn" id="1_rwcgm"]
+
+[node name="AIChat" type="Control" unique_id=645231887]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k48mc")
+
+[node name="Background" type="ColorRect" parent="." unique_id=486225049]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.22670749, 0.22670749, 0.22670746, 1)
+
+[node name="MainLayout" type="VBoxContainer" parent="." unique_id=1458075220]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="PanelContainer" parent="MainLayout" unique_id=1604579408]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="CharacterName" type="Label" parent="MainLayout/TopBar" unique_id=1785585551]
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="ChatArea" type="ScrollContainer" parent="MainLayout" unique_id=1288186829]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MessageList" type="VBoxContainer" parent="MainLayout/ChatArea" unique_id=590057792]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="InputBar" type="HBoxContainer" parent="MainLayout" unique_id=706647351]
+layout_mode = 2
+
+[node name="Input" type="LineEdit" parent="MainLayout/InputBar" unique_id=917737226]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+
+[node name="SendButton" type="Button" parent="MainLayout/InputBar" unique_id=1253769849]
+layout_mode = 2
+text = "SEND MESSAGE"
+
+[node name="AIServer" parent="." unique_id=66558478 instance=ExtResource("1_rwcgm")]

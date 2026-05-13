@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dbxwrmwxbs3kd"]
+
+[ext_resource type="Script" uid="uid://dnrkkn7pjoiq1" path="res://scripts/ai_server.gd" id="1_n6m7f"]
+
+[node name="AIServer" type="Node" unique_id=66558478]
+script = ExtResource("1_n6m7f")

@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="murder_mystery"
+run/main_scene="res://scenes/ai_chat.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
