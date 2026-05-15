@@ -15,6 +15,16 @@ run/main_scene="res://scenes/ai_chat.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://de1pcwb27rh2m"
+general/text_to_speech=true
+driver/enable_input=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_whisper/plugin.cfg")
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

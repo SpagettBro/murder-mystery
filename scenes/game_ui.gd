@@ -5,6 +5,13 @@ extends Control
 @onready var server: AIServer = $AIServer
 @onready var character_name: Label = $MainLayout/TopBar/CharacterName
 
+@onready var whisper = $SpeechToText
+@onready var mic_player = $MicPlayer
+
+var voices = DisplayServer.tts_get_voices_for_language("en")
+#safety check
+var voice_id = voices[0] if not voices.is_empty() else ""
+
 var chat_history: Array = []
 var char_name: String = ""
 
@@ -23,6 +30,9 @@ func _ready() -> void:
 		all_characters = JSON.parse_string(json_text)
 	
 	setup_character_prompt("8da2d7bd-58a9-4101-8c40-d6111d7880e1")
+	
+	if whisper:
+		whisper.transcribed_msg.connect(_on_whisper_transcribed)
 	
 func setup_character_prompt(character_id: String):
 	var char_data = {}
@@ -59,6 +69,8 @@ func setup_character_prompt(character_id: String):
 
 # Sending the message to the AI as a prompt
 func _send_to_server(text: String, is_player: bool = false):
+	DisplayServer.tts_stop()
+	
 	if is_player:
 		chat_history.append({"role": "user", "content": text})
 		_add_bubble("You", text)
@@ -68,9 +80,13 @@ func _send_to_server(text: String, is_player: bool = false):
 
 # Getting a message back. Also this is a signal
 func _on_ai_reply(content: String):
+	DisplayServer.tts_stop()
 	input.editable = true
 	chat_history.append({"role": "assistant", "content": content})
 	_add_bubble(char_name, content)
+	
+	if voice_id != "":
+		DisplayServer.tts_speak(content, voice_id)
 	
 	# Bringing the scroller to the most recent messages
 	await get_tree().process_frame
@@ -93,3 +109,34 @@ func _on_send_pressed(_text_ignore = ""):
 	
 	input.text = ""
 	_send_to_server(text, true)
+
+func _on_whisper_transcribed(is_final: bool, new_text: String):
+	print("Whisper Signal: ", is_final, " TEXT: ", new_text)
+	if is_final:
+		var text = new_text.strip_edges()
+		if text.length() > 2:
+			DisplayServer.tts_stop()
+			_process_voice_input(text)
+
+func _process_voice_input(text: String):
+	DisplayServer.tts_stop()
+	input.text = "" 
+	_send_to_server(text, true)
+
+func _input(event: InputEvent) -> void:
+	if input.has_focus():
+		return
+	
+	if event is InputEventKey and event.keycode == KEY_CTRL and event.location == KEY_LOCATION_RIGHT:
+		
+		if event.is_pressed() and not event.is_echo():
+			if not mic_player.playing:
+				mic_player.play()
+				DisplayServer.tts_stop()
+				input.placeholder_text = "Listening... (Release Right-Ctrl to send)"
+			
+		elif not event.is_pressed():
+			if mic_player.playing:
+				await get_tree().create_timer(0.8).timeout
+				mic_player.stop()
+				input.placeholder_text = "Hold Right-Ctrl to talk..."
