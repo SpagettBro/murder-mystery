@@ -127,7 +127,7 @@ func _input(event: InputEvent) -> void:
 	if input.has_focus():
 		return
 	
-	if event is InputEventKey and event.keycode == KEY_CTRL and event.location == KEY_LOCATION_RIGHT:
+	if event is InputEventKey and event.keycode == KEY_CTRL and event.location == KEY_LOCATION_LEFT:
 		
 		if event.is_pressed() and not event.is_echo():
 			if not mic_player.playing:

@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://b4ifr0pxnyi3s" path="res://scenes/game_ui.gd" id="1_k48mc"]
 [ext_resource type="PackedScene" uid="uid://dbxwrmwxbs3kd" path="res://scenes/ai_server.tscn" id="1_rwcgm"]
-[ext_resource type="WhisperResource" uid="uid://t8586muusr77" path="res://addons/godot_whisper/models/gglm-tiny.en.bin" id="3_tsswl"]
 [ext_resource type="Script" uid="uid://bto8lnftei17w" path="res://addons/godot_whisper/capture_stream_to_text.gd" id="4_4yujt"]
 
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_tsswl"]
+
+[sub_resource type="WhisperResource" id="WhisperResource_yhi0a"]
+file = "uid://d2myu83i6sr64"
 
 [node name="AIChat" type="Control" unique_id=645231887]
 layout_mode = 3
@@ -70,6 +72,6 @@ stream = SubResource("AudioStreamMicrophone_tsswl")
 bus = &"Record"
 
 [node name="SpeechToText" type="SpeechToText" parent="." unique_id=290970858]
-language_model = ExtResource("3_tsswl")
+language_model = SubResource("WhisperResource_yhi0a")
 script = ExtResource("4_4yujt")
 audio_effect_capture_index = 2

@@ -86,7 +86,13 @@ func transcribe_thread():
 			finish_sentence = true
 		var text : String
 		for token in tokens:
-			text += token["text"]
+			if token.has("text"):
+				text += token["text"]
+			elif token.has("text_bytes"):
+				var byte_array = PackedByteArray(token["text_bytes"])
+				text += byte_array.get_string_from_utf8()
+			else:
+				push_warning("Skipped invalid token: " + str(token))
 		text = _remove_special_characters(text)
 		if _has_terminating_characters(text, punctuation_characters) || no_activity:
 			finish_sentence = true
