@@ -3,13 +3,10 @@
 [ext_resource type="Script" uid="uid://b4ifr0pxnyi3s" path="res://scenes/game_ui.gd" id="1_k48mc"]
 [ext_resource type="PackedScene" uid="uid://dbxwrmwxbs3kd" path="res://scenes/ai_server.tscn" id="1_rwcgm"]
 [ext_resource type="Texture2D" uid="uid://bvns6hraq0oxl" path="res://microphone-342.svg" id="2_4yujt"]
-[ext_resource type="WhisperResource" uid="uid://t8586muusr77" path="res://addons/godot_whisper/models/gglm-tiny.en.bin" id="3_tsswl"]
 [ext_resource type="Script" uid="uid://bto8lnftei17w" path="res://addons/godot_whisper/capture_stream_to_text.gd" id="4_4yujt"]
+[ext_resource type="WhisperResource" uid="uid://did6nqgev1vsd" path="res://addons/godot_whisper/models/gglm-base.en.bin" id="4_llldj"]
 
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_tsswl"]
-
-[sub_resource type="WhisperResource" id="WhisperResource_yhi0a"]
-file = "uid://d2myu83i6sr64"
 
 [node name="AIChat" type="Control" unique_id=645231887]
 layout_mode = 3
@@ -73,6 +70,7 @@ layout_mode = 2
 icon = ExtResource("2_4yujt")
 icon_alignment = 1
 expand_icon = true
+
 [node name="ModelDropdown" type="OptionButton" parent="MainLayout" unique_id=168038351]
 layout_mode = 2
 
@@ -80,14 +78,14 @@ layout_mode = 2
 
 [node name="MicPlayer" type="AudioStreamPlayer" parent="." unique_id=204119656]
 stream = SubResource("AudioStreamMicrophone_tsswl")
+bus = &"Record"
 
 [node name="SpeechToText" type="SpeechToText" parent="." unique_id=290970858]
-language_model = SubResource("WhisperResource_yhi0a")
+language_model = ExtResource("4_llldj")
 script = ExtResource("4_4yujt")
 maximum_sentence_time = 10
-audio_effect_capture_index = 2
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=1809728865]
 
 [connection signal="button_down" from="MainLayout/InputBar/MicButton" to="." method="_on_mic_button_down"]
 [connection signal="button_up" from="MainLayout/InputBar/MicButton" to="." method="_on_mic_button_up"]
-
-[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=1809728865]

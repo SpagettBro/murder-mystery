@@ -20,7 +20,8 @@ func _get_configuration_warnings():
 		if recording:
 			_ready()
 		else:
-			thread.wait_to_finish()
+			if thread != null and thread.is_started():
+				thread.wait_to_finish()
 	get:
 		return recording
 ## The interval at which transcribing is done. Use a value bigger than the time it takes to transcribe (eg. depends on model).
@@ -86,13 +87,7 @@ func transcribe_thread():
 			finish_sentence = true
 		var text : String
 		for token in tokens:
-			if token.has("text"):
-				text += token["text"]
-			elif token.has("text_bytes"):
-				var byte_array = PackedByteArray(token["text_bytes"])
-				text += byte_array.get_string_from_utf8()
-			else:
-				push_warning("Skipped invalid token: " + str(token))
+			text += token["text"]
 		text = _remove_special_characters(text)
 		if _has_terminating_characters(text, punctuation_characters) || no_activity:
 			finish_sentence = true
