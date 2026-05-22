@@ -21,6 +21,7 @@ var chat_history: Array = []
 var char_name: String = ""
 
 var all_characters = []
+var current_transcription: String = ""
 
 func _ready() -> void:
 	server.response_received.connect(_on_ai_reply)
@@ -150,12 +151,10 @@ func _on_send_pressed(_text_ignore = ""):
 	_send_to_server(text, true)
 
 func _on_whisper_transcribed(is_final: bool, new_text: String):
-	print("Whisper Signal: ", is_final, " TEXT: ", new_text)
-	if is_final:
-		var text = new_text.strip_edges()
-		if text.length() > 2:
-			DisplayServer.tts_stop()
-			_process_voice_input(text)
+	var text = new_text.strip_edges()
+	if text.length() > 0:
+		current_transcription = text
+		input.text = text
 
 func _process_voice_input(text: String):
 	DisplayServer.tts_stop()
@@ -164,11 +163,23 @@ func _process_voice_input(text: String):
 
 func _on_mic_button_down() -> void:
 	DisplayServer.tts_stop()
+	current_transcription = ""
+	input.text = ""
 	input.placeholder_text = "Listening... (release button to interpret)"
+	
+	if whisper:
+		whisper._accumulated_frames.clear()
 	
 	mic_player.volume_db = 0.0
 
 func _on_mic_button_up() -> void:
-	input.placeholder_text = "Type or hold Mic button to talk..."
-	
+	input.placeholder_text = "Processing..."
 	mic_player.volume_db = -80.0
+	
+	await get_tree().create_timer(0.6).timeout
+	
+	if current_transcription.length() > 2:
+		_process_voice_input(current_transcription)
+		current_transcription = ""
+	
+	input.placeholder_text = "Type or hold Mic button to talk..."

@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dbxwrmwxbs3kd" path="res://scenes/ai_server.tscn" id="1_rwcgm"]
 [ext_resource type="Texture2D" uid="uid://bvns6hraq0oxl" path="res://microphone-342.svg" id="2_4yujt"]
 [ext_resource type="Script" uid="uid://bto8lnftei17w" path="res://addons/godot_whisper/capture_stream_to_text.gd" id="4_4yujt"]
+[ext_resource type="WhisperResource" uid="uid://cpl22guu7g85j" path="res://addons/godot_whisper/models/gglm-base.en.bin" id="4_llldj"]
 
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_tsswl"]
 
