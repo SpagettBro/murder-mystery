@@ -63,13 +63,17 @@ theme_override_font_sizes/font_size = 22
 layout_mode = 2
 text = "SEND MESSAGE"
 
+[node name="ModelDropdown" type="OptionButton" parent="MainLayout" unique_id=168038351]
+layout_mode = 2
+
 [node name="AIServer" parent="." unique_id=66558478 instance=ExtResource("1_rwcgm")]
 
 [node name="MicPlayer" type="AudioStreamPlayer" parent="." unique_id=204119656]
 stream = SubResource("AudioStreamMicrophone_tsswl")
-bus = &"Record"
 
 [node name="SpeechToText" type="SpeechToText" parent="." unique_id=290970858]
 language_model = ExtResource("3_tsswl")
 script = ExtResource("4_4yujt")
 audio_effect_capture_index = 2
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=1809728865]
