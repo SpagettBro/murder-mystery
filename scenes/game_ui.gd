@@ -4,10 +4,14 @@ extends Control
 @onready var input: LineEdit = $MainLayout/InputBar/Input
 @onready var server: AIServer = $AIServer
 @onready var character_name: Label = $MainLayout/TopBar/CharacterName
+@onready var model_selector = $MainLayout/ModelDropdown
+@onready var http_request = $HTTPRequest
+@onready var selected_model: String
 
 @onready var whisper = $SpeechToText
 @onready var mic_player = $MicPlayer
 @onready var mic_button: Button = $MainLayout/InputBar/MicButton
+
 
 var voices = DisplayServer.tts_get_voices_for_language("en")
 #safety check
@@ -17,9 +21,14 @@ var chat_history: Array = []
 var char_name: String = ""
 
 var all_characters = []
+var current_transcription: String = ""
 
 func _ready() -> void:
 	server.response_received.connect(_on_ai_reply)
+	
+	http_request.request_completed.connect(_on_models_received)
+	fetch_ollama_models()
+	model_selector.item_selected.connect(_on_model_selected)
 	
 	input.text_submitted.connect(_on_send_pressed)
 	if has_node("MainLayout/InputBar/SendButton"):
@@ -30,14 +39,41 @@ func _ready() -> void:
 		var json_text = file.get_as_text()
 		all_characters = JSON.parse_string(json_text)
 	
-	setup_character_prompt("8da2d7bd-58a9-4101-8c40-d6111d7880e1")
-	
 	if whisper:
 		whisper.transcribed_msg.connect(_on_whisper_transcribed)
 		
 		mic_player.play()
 		mic_player.volume_db = -80.0
+
+func fetch_ollama_models():
+	http_request.request("http://localhost:11434/api/tags")
 	
+func _on_models_received(result, response_code, headers, body):
+	if response_code != 200:
+		print("Failed to reach Ollama: ", response_code)
+		return
+
+	var json = JSON.new()
+	var error = json.parse(body.get_string_from_utf8())
+	if error != OK:
+		print("JSON parse error")
+		return
+
+	var models = json.get_data()["models"]
+	model_selector.clear()
+
+	for model in models:
+		model_selector.add_item(model["name"])
+
+	if model_selector.item_count > 0:
+		model_selector.select(0)	
+		selected_model = model_selector.get_item_text(0)  # set selected_model here!
+		setup_character_prompt("8da2d7bd-58a9-4101-8c40-d6111d7880e1")
+
+func _on_model_selected(index: int):
+	selected_model = model_selector.get_item_text(index)
+	print("Model selected: ", selected_model)
+
 func setup_character_prompt(character_id: String):
 	var char_data = {}
 	# Find the specific character in the JSON list with the given id
@@ -80,7 +116,7 @@ func _send_to_server(text: String, is_player: bool = false):
 		_add_bubble("You", text)
 	
 	input.editable = false
-	server.send_prompt(chat_history, "llama3")
+	server.send_prompt(chat_history, selected_model)
 
 # Getting a message back. Also this is a signal
 func _on_ai_reply(content: String):
@@ -115,12 +151,10 @@ func _on_send_pressed(_text_ignore = ""):
 	_send_to_server(text, true)
 
 func _on_whisper_transcribed(is_final: bool, new_text: String):
-	print("Whisper Signal: ", is_final, " TEXT: ", new_text)
-	if is_final:
-		var text = new_text.strip_edges()
-		if text.length() > 2:
-			DisplayServer.tts_stop()
-			_process_voice_input(text)
+	var text = new_text.strip_edges()
+	if text.length() > 0:
+		current_transcription = text
+		input.text = text
 
 func _process_voice_input(text: String):
 	DisplayServer.tts_stop()
@@ -129,11 +163,23 @@ func _process_voice_input(text: String):
 
 func _on_mic_button_down() -> void:
 	DisplayServer.tts_stop()
+	current_transcription = ""
+	input.text = ""
 	input.placeholder_text = "Listening... (release button to interpret)"
+	
+	if whisper:
+		whisper._accumulated_frames.clear()
 	
 	mic_player.volume_db = 0.0
 
 func _on_mic_button_up() -> void:
-	input.placeholder_text = "Type or hold Mic button to talk..."
-	
+	input.placeholder_text = "Processing..."
 	mic_player.volume_db = -80.0
+	
+	await get_tree().create_timer(0.6).timeout
+	
+	if current_transcription.length() > 2:
+		_process_voice_input(current_transcription)
+		current_transcription = ""
+	
+	input.placeholder_text = "Type or hold Mic button to talk..."
