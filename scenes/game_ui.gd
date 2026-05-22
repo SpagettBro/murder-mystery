@@ -7,6 +7,7 @@ extends Control
 
 @onready var whisper = $SpeechToText
 @onready var mic_player = $MicPlayer
+@onready var mic_button: Button = $MainLayout/InputBar/MicButton
 
 var voices = DisplayServer.tts_get_voices_for_language("en")
 #safety check
@@ -33,6 +34,9 @@ func _ready() -> void:
 	
 	if whisper:
 		whisper.transcribed_msg.connect(_on_whisper_transcribed)
+		
+		mic_player.play()
+		mic_player.volume_db = -80.0
 	
 func setup_character_prompt(character_id: String):
 	var char_data = {}
@@ -120,23 +124,16 @@ func _on_whisper_transcribed(is_final: bool, new_text: String):
 
 func _process_voice_input(text: String):
 	DisplayServer.tts_stop()
-	input.text = "" 
-	_send_to_server(text, true)
+	input.text = text 
+	input.grab_focus()
 
-func _input(event: InputEvent) -> void:
-	if input.has_focus():
-		return
+func _on_mic_button_down() -> void:
+	DisplayServer.tts_stop()
+	input.placeholder_text = "Listening... (release button to interpret)"
 	
-	if event is InputEventKey and event.keycode == KEY_CTRL and event.location == KEY_LOCATION_LEFT:
-		
-		if event.is_pressed() and not event.is_echo():
-			if not mic_player.playing:
-				mic_player.play()
-				DisplayServer.tts_stop()
-				input.placeholder_text = "Listening... (Release Right-Ctrl to send)"
-			
-		elif not event.is_pressed():
-			if mic_player.playing:
-				await get_tree().create_timer(0.8).timeout
-				mic_player.stop()
-				input.placeholder_text = "Hold Right-Ctrl to talk..."
+	mic_player.volume_db = 0.0
+
+func _on_mic_button_up() -> void:
+	input.placeholder_text = "Type or hold Mic button to talk..."
+	
+	mic_player.volume_db = -80.0

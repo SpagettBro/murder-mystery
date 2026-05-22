@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://b4ifr0pxnyi3s" path="res://scenes/game_ui.gd" id="1_k48mc"]
 [ext_resource type="PackedScene" uid="uid://dbxwrmwxbs3kd" path="res://scenes/ai_server.tscn" id="1_rwcgm"]
+[ext_resource type="Texture2D" uid="uid://bvns6hraq0oxl" path="res://microphone-342.svg" id="2_4yujt"]
+[ext_resource type="WhisperResource" uid="uid://t8586muusr77" path="res://addons/godot_whisper/models/gglm-tiny.en.bin" id="3_tsswl"]
 [ext_resource type="Script" uid="uid://bto8lnftei17w" path="res://addons/godot_whisper/capture_stream_to_text.gd" id="4_4yujt"]
 
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_tsswl"]
@@ -65,6 +67,13 @@ theme_override_font_sizes/font_size = 22
 layout_mode = 2
 text = "SEND MESSAGE"
 
+[node name="MicButton" type="Button" parent="MainLayout/InputBar" unique_id=82159374]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+icon = ExtResource("2_4yujt")
+icon_alignment = 1
+expand_icon = true
+
 [node name="AIServer" parent="." unique_id=66558478 instance=ExtResource("1_rwcgm")]
 
 [node name="MicPlayer" type="AudioStreamPlayer" parent="." unique_id=204119656]
@@ -74,4 +83,7 @@ bus = &"Record"
 [node name="SpeechToText" type="SpeechToText" parent="." unique_id=290970858]
 language_model = SubResource("WhisperResource_yhi0a")
 script = ExtResource("4_4yujt")
-audio_effect_capture_index = 2
+maximum_sentence_time = 10
+
+[connection signal="button_down" from="MainLayout/InputBar/MicButton" to="." method="_on_mic_button_down"]
+[connection signal="button_up" from="MainLayout/InputBar/MicButton" to="." method="_on_mic_button_up"]
