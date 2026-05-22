@@ -85,9 +85,9 @@ stream = SubResource("AudioStreamMicrophone_tsswl")
 language_model = SubResource("WhisperResource_yhi0a")
 script = ExtResource("4_4yujt")
 maximum_sentence_time = 10
+audio_effect_capture_index = 2
 
 [connection signal="button_down" from="MainLayout/InputBar/MicButton" to="." method="_on_mic_button_down"]
 [connection signal="button_up" from="MainLayout/InputBar/MicButton" to="." method="_on_mic_button_up"]
-audio_effect_capture_index = 2
 
 [node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=1809728865]
